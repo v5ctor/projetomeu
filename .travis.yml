@@ -1,10 +1,10 @@
 language: python
-python: [
+python:
     -3.8
-  ]
-install: [
+
+install: 
     -pip install -r requirements-dev.txt
-  ]
-script: [
+
+script:
     -flake8
-  ]
+
