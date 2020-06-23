@@ -100,7 +100,7 @@ DESCRIPTION = "Projeto vazio ainda mas pode ser usado futuramente"
 AUTHOR = "Víctor De Rosa"
 AUTHOR_EMAIL = "victorbitt00@gmail.com"
 URL = "https://github.com/v5ctor/projetomeu/"
-VERSION = __import__(PACKAGE)
+VERSION = __import__(PACKAGE).__version__
 
 setup(
     name=NAME,
