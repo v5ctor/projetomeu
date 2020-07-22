@@ -9,7 +9,7 @@ install:
 
 script:
     - flake8
-    - pytest projetomeu --cov=tests
+    - pytest projetomeu --cov=projetomeu
 after_success:
     - codecov
 
