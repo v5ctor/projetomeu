@@ -5,7 +5,7 @@ sudo: true
 python:
     - 3.8
 install:
-    - pip install -r requirements-dev.txt codecov
+    - pip install -r requirements.txt codecov
 
 script:
     - flake8
