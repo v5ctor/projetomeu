@@ -1,6 +1,6 @@
 import pytest
 
-from projetomeu.spam import Enviador, EmailInvalido
+from projetomeu.spam import Enviador, Email_Invalido
 
 
 def test_criar_enviador():
@@ -9,24 +9,22 @@ def test_criar_enviador():
 
 
 @pytest.mark.parametrize('remetente', ['renat.mello,bit@gmail.com', 'victorbitt00@gmail'])
-
 def test_remetente(remetente):
-    enviador=Enviador()
-    resultado=enviador.enviar(remetente,
-                    'monicaremudo@yahoo.com.br',
-                    'Festa Junina',
-                    'Parabéns pela festa.'
-                    )
+    enviador = Enviador()
+    resultado = enviador.enviar(remetente,
+                                'monicaremudo@yahoo.com.br',
+                                'Festa Junina',
+                                'Parabéns pela festa.'
+                                )
     assert remetente in resultado
 
 
 @pytest.mark.parametrize('remetente', ['', 'victorbittgmail'])
-
 def test_remetente_invalido(remetente):
     enviador = Enviador()
-    with pytest.raises(EmailInvalido):
+    with pytest.raises(Email_Invalido):
         enviador.enviar(remetente,
-                             'monicaremudo@yahoo.com.br',
-                            'Festa Junina',
-                            'Parabéns pela festa.'
-                            )
+                        'monicaremudo@yahoo.com.br',
+                        'Festa Junina',
+                        'Parabéns pela festa.'
+                        )
