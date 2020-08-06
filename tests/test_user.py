@@ -7,10 +7,12 @@ def test_salvar_user():
     sessao = conexao.gerar_sessao()
     usuario = Usuario(nome='Jonas')
     sessao.salvar(usuario)
+
     assert isinstance(usuario.id, int)
     sessao.roll_back()
     sessao.fechar()
     conexao.fechar()
+
 
 def test_listar_user():
     conexao = Conexao()
