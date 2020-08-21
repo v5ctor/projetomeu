@@ -5,7 +5,7 @@ pyflakes==2.2.0
 
 more-itertools==8.4.0
 py==1.9.0
-attrs==19.3.0
+attrs==20.1.0
 atomicwrites==1.4.0
 pyparsing==2.4.7
 pluggy==0.13.1
