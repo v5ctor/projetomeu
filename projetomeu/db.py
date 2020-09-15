@@ -21,7 +21,7 @@ class Sessao:
 
 
 class Conexao:
-    sleep(10)
+    sleep(1)
 
     def gerar_sessao(self):
         return Sessao()
