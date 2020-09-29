@@ -5,6 +5,11 @@ from projetomeu.modelos import Usuario
 from projetomeu.spam import Enviador
 
 
+class EnviadorMock(Enviador):
+    def enviar(self, remetente, destinatario, assunto, corpo):
+        self.parametros_envio = (remetente, destinatario, assunto, corpo)
+
+
 @pytest.mark.parametrize(
     'usuarios', [[Usuario(nome='Víctor', email='victorbitt00@gmail.com'),
                   Usuario(nome='Mikkel', email='mikkanwhald@nielsen.com')],
@@ -12,11 +17,6 @@ from projetomeu.spam import Enviador
                   ]
                  ]
 )
-class EnviadorMock(Enviador):
-    def enviar(self, remetente, destinatario, assunto, corpo):
-        self.parametros_envio = (remetente, destinatario, assunto, corpo)
-
-
 def test_qtd_de_spam(sessao, usuarios):
     for usuario in usuarios:
         sessao.salvar(usuario)
