@@ -6,7 +6,7 @@ chardet==3.0.4
 colorama==0.4.3
 coverage==5.2
 docutils==0.16
-flake8==3.8.3
+flake8==4.0.1
 idna==2.10
 keyring==21.2.1
 mccabe==0.6.1
