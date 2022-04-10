@@ -7,7 +7,7 @@ more-itertools==8.4.0
 py==1.9.0
 attrs==19.3.0
 atomicwrites==1.4.0
-pyparsing==2.4.7
+pyparsing==3.0.8
 pluggy==0.13.1
 colorama==0.4.3
 pytest==5.4.3
